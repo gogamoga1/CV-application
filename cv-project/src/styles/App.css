@@ -79,8 +79,7 @@ button:hover {
   padding: 4px;
   height: 3vw;
   margin-bottom: 1vw;
-  /* font-size: 2vw; */
-  background-color: #d9f7c7;
+  background-color: rgba(127, 219, 255, 0.8);
 }
 
 a {
@@ -118,3 +117,13 @@ a {
 .test {
   
 }
+
+/* label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  margin: auto !important;
+}  */

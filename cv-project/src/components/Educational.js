@@ -23,6 +23,7 @@ const Educational = ({formData, setFormData, htmlready, editable, className}) =>
             onChange={(e) => inputHandler(e, 'schoolName')}
             placeholder="Your school name.."
             disabled={editable}
+            required
           />
         </label></div>
         <label htmlFor="study-title">
@@ -32,7 +33,7 @@ const Educational = ({formData, setFormData, htmlready, editable, className}) =>
             value={formData.studyTitle}
             onChange={(e) => inputHandler(e, 'studyTitle')}
             placeholder="Your position title.."
-            
+            required
             disabled={editable}
 
           />
@@ -44,7 +45,7 @@ const Educational = ({formData, setFormData, htmlready, editable, className}) =>
             type="date"
             value={formData.studyDate}
             onChange={(e) => inputHandler(e, 'studyDate')}
-            
+            required
             disabled={editable}
 
           />

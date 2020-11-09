@@ -22,6 +22,7 @@ const General = ({formData, setFormData, htmlready, editable, className}) => {
             placeholder="Your name.."
             onChange={(e) => inputHandler(e, 'name')}
             disabled={editable}
+            required
           />
         </label>
         <label htmlFor="email">
@@ -32,6 +33,7 @@ const General = ({formData, setFormData, htmlready, editable, className}) => {
             placeholder="Your e-mail.."
             onChange={(e) => inputHandler(e, 'email')}
             disabled={editable}
+            required
           />
         </label>
         <label htmlFor="tel">
@@ -42,6 +44,7 @@ const General = ({formData, setFormData, htmlready, editable, className}) => {
             placeholder="Your telephone.."
             onChange={(e) => inputHandler(e, 'tel')}
             disabled={editable}
+            required
           />
         </label>
         <button>{!editable ? 'Submit' : 'Edit'}</button>

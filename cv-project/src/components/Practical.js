@@ -19,6 +19,7 @@ const Practical = ({ formData, setFormData, htmlready, editable, className }) =>
             placeholder="Your company name.."
             onChange={(e) => inputHandler(e, 'companyName')}
             disabled={editable}
+            required
           />
         </label>
         <label htmlFor="position-title">
@@ -28,6 +29,7 @@ const Practical = ({ formData, setFormData, htmlready, editable, className }) =>
             placeholder="Your position title.."
             onChange={(e) => inputHandler(e, 'positionTitle')}
             disabled={editable}
+            required
           />
         </label>
         <label htmlFor="main-tasks">
@@ -38,16 +40,18 @@ const Practical = ({ formData, setFormData, htmlready, editable, className }) =>
             cols="33"
             onChange={(e) => inputHandler(e, 'mainTasks')}
             disabled={editable}
+            required
           />
         </label>
         <label htmlFor="date-working">
-          From and until you worked for that company
+          When you worked for company
           <input
             id="date-working"
             type="date"
             onChange={(e) => inputHandler(e, 'workingDate')}
             value={formData.workingDate}
             disabled={editable}
+            required
           />
         </label>
         <button>{!editable ? 'Submit' : 'Edit'}</button>
