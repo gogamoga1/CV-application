@@ -1,9 +1,6 @@
 import React from 'react'
 
-const General = ({formData, setFormData, htmlready, editable, className}) => {
-  
-
-
+const General = ({ formData, setFormData, htmlready, editable, className }) => {
   const inputHandler = (e, property) => {
     setFormData({ ...formData, [property]: e.target.value })
   }
@@ -14,6 +11,8 @@ const General = ({formData, setFormData, htmlready, editable, className}) => {
   }
   return (
     <div className={className ? `${className} form-container` : `form-container`}>
+      <h3 className='block-name'>General information</h3>
+
       <form onSubmit={submitHandler}>
         <label htmlFor="name">
           Name

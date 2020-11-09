@@ -43,7 +43,7 @@ const Form = () => {
   return (
     <>
       <section>
-        <div className="main-form">
+        <div className={!showCV ? "main-form" : "main-form paper"}>
           {!showCV ? (
             <div className="Form">
               <General

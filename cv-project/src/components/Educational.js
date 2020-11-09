@@ -14,8 +14,9 @@ const Educational = ({formData, setFormData, htmlready, editable, className}) =>
   }
   return (
     <div className={className ? `${className} form-container` : `form-container`}>
+      <h3 className='block-name'>Educational experience</h3>
       <form onSubmit={submitHandler} >
-       <div className='test'> <label htmlFor="school-name">
+       <label htmlFor="school-name">
           School name
           <input
             id="school-name"
@@ -25,7 +26,7 @@ const Educational = ({formData, setFormData, htmlready, editable, className}) =>
             disabled={editable}
             required
           />
-        </label></div>
+        </label>
         <label htmlFor="study-title">
           Title of study
           <input

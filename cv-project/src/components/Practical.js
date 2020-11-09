@@ -11,6 +11,8 @@ const Practical = ({ formData, setFormData, htmlready, editable, className }) =>
 
   return (
     <div className={className ? `${className} form-container` : `form-container`}>
+            <h3 className='block-name'>Practical experience</h3>
+
       <form onSubmit={submitHandler}>
         <label htmlFor="company-name">
           Company name
