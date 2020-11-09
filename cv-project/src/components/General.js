@@ -1,6 +1,6 @@
 import React from 'react'
 
-const General = ({formData, setFormData, htmlready, editable}) => {
+const General = ({formData, setFormData, htmlready, editable, className}) => {
   
 
 
@@ -13,7 +13,7 @@ const General = ({formData, setFormData, htmlready, editable}) => {
     htmlready((prevState) => !prevState)
   }
   return (
-    <div className="form-container">
+    <div className={className ? `${className} form-container` : `form-container`}>
       <form onSubmit={submitHandler}>
         <label htmlFor="name">
           Name
@@ -44,7 +44,7 @@ const General = ({formData, setFormData, htmlready, editable}) => {
             disabled={editable}
           />
         </label>
-        <button>{editable ? 'Submit' : 'Edit'}</button>
+        <button>{!editable ? 'Submit' : 'Edit'}</button>
       </form>
     </div>
   )

@@ -1,35 +1,21 @@
 import React from 'react'
+import GenerateForm from './GenerateForm'
 
 const CV = ({ generalData, schoolData, practicalData }) => {
   return (
     <>
       <h1> General data</h1>
       <hr />
-      {Object.entries(generalData).map(([key, value]) => {
-        return (
-          <h1 key={key}>
-            {key}: {value}
-          </h1>
-        )
-      })}
-            <h1> Educational data data</h1>
-            <hr />
-      {Object.entries(schoolData).map(([key, value]) => {
-        return (
-          <h1 key={key}>
-            {key}: {value}
-          </h1>
-        )
-      })}
-            <h1> Practical data</h1>
-            <hr />
-      {Object.entries(practicalData).map(([key, value]) => {
-        return (
-          <h1 key={key}>
-            {key}: {value}
-          </h1>
-        )
-      })}
+      <GenerateForm obj={generalData} />
+      <hr />
+
+      <h1> Educational data</h1>
+      <hr />
+      <GenerateForm obj={schoolData} />
+
+      <h1> Practical data</h1>
+      <hr />
+      <GenerateForm obj={practicalData} />
     </>
   )
 }

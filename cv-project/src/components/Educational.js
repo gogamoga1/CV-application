@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Educational = ({formData, setFormData, htmlready, editable}) => {
+const Educational = ({formData, setFormData, htmlready, editable, className}) => {
 
 
 
@@ -13,9 +13,9 @@ const Educational = ({formData, setFormData, htmlready, editable}) => {
     htmlready((prevState) => !prevState )
   }
   return (
-    <div className="form-container">
-      <form onSubmit={submitHandler}>
-        <label htmlFor="school-name">
+    <div className={className ? `${className} form-container` : `form-container`}>
+      <form onSubmit={submitHandler} >
+       <div className='test'> <label htmlFor="school-name">
           School name
           <input
             id="school-name"
@@ -24,7 +24,7 @@ const Educational = ({formData, setFormData, htmlready, editable}) => {
             placeholder="Your school name.."
             disabled={editable}
           />
-        </label>
+        </label></div>
         <label htmlFor="study-title">
           Title of study
           <input
@@ -49,7 +49,7 @@ const Educational = ({formData, setFormData, htmlready, editable}) => {
 
           />
         </label>
-        <button>{editable ? 'Submit' : 'Edit'}</button>
+        <button>{!editable ? 'Submit' : 'Edit'}</button>
       </form>
     </div>
   )

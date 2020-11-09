@@ -1,17 +1,16 @@
 import React from 'react'
 
-const Practical = ({ formData, setFormData, htmlready, editable }) => {
+const Practical = ({ formData, setFormData, htmlready, editable, className }) => {
   const inputHandler = (e, property) => {
     setFormData({ ...formData, [property]: e.target.value })
   }
-
   const submitHandler = (e) => {
     e.preventDefault()
     htmlready((prevState) => !prevState)
   }
 
   return (
-    <div className="form-container">
+    <div className={className ? `${className} form-container` : `form-container`}>
       <form onSubmit={submitHandler}>
         <label htmlFor="company-name">
           Company name
@@ -51,7 +50,7 @@ const Practical = ({ formData, setFormData, htmlready, editable }) => {
             disabled={editable}
           />
         </label>
-        <button>{editable ? 'Submit' : 'Edit'}</button>
+        <button>{!editable ? 'Submit' : 'Edit'}</button>
       </form>
     </div>
   )
