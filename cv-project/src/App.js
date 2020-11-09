@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="header"><h1 className="logo-name">
-      <a href="https://github.com/gogamoga1/CV-application"><img id="github" src={logo} alt="github" /> CV Application</ a>
+      <a href="https://github.com/gogamoga1/CV-application/tree/master/cv-project"><img id="github" src={logo} alt="github" /> CV Application</ a>
         </h1>
       </header>
       <Form />
